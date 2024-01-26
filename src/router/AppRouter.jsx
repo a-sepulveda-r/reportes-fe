@@ -4,21 +4,23 @@ import { FormPage, ReportPage } from '../pages';
 
 export const AppRouter = () => {
   return (
-    <>
-      <Navbar />
+    <div className='flex flex-col min-h-screen'>
+      <div className='flex-1'>
+        <Navbar />
 
-      <Routes>
-        <Route
-          path='/*'
-          element={<FormPage />}
-        />
-        <Route
-          path='/reportes'
-          element={<ReportPage />}
-        />
-      </Routes>
+        <Routes>
+          <Route
+            path='/*'
+            element={<FormPage />}
+          />
+          <Route
+            path='/reportes'
+            element={<ReportPage />}
+          />
+        </Routes>
+      </div>
 
       <Footer />
-    </>
+    </div>
   );
 };
